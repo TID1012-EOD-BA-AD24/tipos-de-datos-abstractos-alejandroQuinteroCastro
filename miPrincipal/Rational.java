@@ -45,10 +45,9 @@ public class Rational{
         return x;
     }
     public Rational mult(Rational a){
-       //coloca aquí el código faltante
+       
     }
     public boolean equal(Rational a,Rational b){
-
         return a.getDenominador()*b.getNumerador() == b.getDenominador()*a.getNumerador();
     }
     public boolean equal(Rational a){
@@ -56,8 +55,7 @@ public class Rational{
     }
     @Override
     public String toString() {
-        //coloca aquí el código faltante
-
+        return this.r[0]+"/"+ this.r[1];
     }
     
 
