@@ -4,7 +4,8 @@ public class Rational{
     private int r[] = new int[2];
 
     public Rational(){
-       //coloca aquí el código faltante
+        this.r[0] = 1;
+        this.r[1] = 1;
     }
 
     public Rational(int a,int b) throws PosicionIlegalException{
@@ -12,7 +13,8 @@ public class Rational{
         {
             throw new PosicionIlegalException();
         }
-       //coloca aquí el código faltante
+        this.r[0] = a;
+        this.r[1] = b;
     }
     
     public int getNumerador(){
