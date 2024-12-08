@@ -3,19 +3,21 @@ package miPrincipal;
 public class Persona {
     private String dni;
     private String nombre;
-    private Fecha fechaNacimiento;
+    private Fecha FechaNacimiento;
     
     public Persona() {
         dni = "";
         nombre = "";
-        fechaNacimiento = new Fecha();
+        FechaNacimiento = new Fecha();
+    }
 
+    public Persona(String dni, String nombre, Fecha fechaNacimiento) {
+        this.dni = dni;
+        this.nombre = nombre;
+        FechaNacimiento = fechaNacimiento;
     }
-    public Persona(String Dni, String Nombre, String FechaNacimiento) {
-        this.dni = Dni;
-        this.nombre = Nombre;
-        this.fechaNacimiento = fechaNacimiento;
-    }
+
+
     public String getDni() {
         return dni;
     }
@@ -29,15 +31,13 @@ public class Persona {
         this.nombre = nombre;
     }
     public Fecha getFechaNacimiento() {
-        return fechaNacimiento;
+        return FechaNacimiento;
     }
     public void setFechaNacimiento(Fecha fechaNacimiento) {
-        fechaNacimiento = fechaNacimiento;
+        FechaNacimiento = fechaNacimiento;
     }
-
-
-
     
-    //coloca aquí el código faltante
+
+
     
 }

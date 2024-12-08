@@ -4,8 +4,8 @@ public class Rational{
     private int r[] = new int[2];
 
     public Rational(){
-        this.r[0] = 1;
-        this.r[1] = 1;
+      r[0] = 0;
+      r[1] = 1;
     }
 
     public Rational(int a,int b) throws PosicionIlegalException{
@@ -13,8 +13,8 @@ public class Rational{
         {
             throw new PosicionIlegalException();
         }
-        this.r[0] = a;
-        this.r[1] = b;
+        r[0] = a;
+        r[1] = b;
     }
     
     public int getNumerador(){
@@ -37,7 +37,15 @@ public class Rational{
         return x;
     }
     public Rational add(Rational a){
-      //coloca aquí el código faltante
+        Rational x = new Rational();
+        x.setNumerador(this.getNumerador()*a.getDenominador()+this.getDenominador()*a.getNumerador());
+        x.setDenominador(this.getDenominador()*a.getDenominador());
+        return x;
+        /*Rational x = new Rational();
+        x.setNumerador(a.getDenominador() * b.getNumerador() + b.getDenominador()* a.getNumerador());
+        x.setDenominador(a.getDenominador() * b.getDenominador());
+        return x;
+        */
     }
 
     public Rational mult(Rational a, Rational b){
@@ -47,17 +55,23 @@ public class Rational{
         return x;
     }
     public Rational mult(Rational a){
-       
+        Rational x = new Rational();
+       x.setNumerador(this.getNumerador()*a.getNumerador());
+       x.setDenominador(this.getDenominador()*a.getDenominador());
+       return x;
     }
     public boolean equal(Rational a,Rational b){
+
         return a.getDenominador()*b.getNumerador() == b.getDenominador()*a.getNumerador();
     }
     public boolean equal(Rational a){
-        //coloca aquí el código faltante
+        return (this.getDenominador()*a.getNumerador() == 
+        a.getDenominador()*this.getNumerador());
     }
     @Override
     public String toString() {
-        return this.r[0]+"/"+ this.r[1];
+        return r[0] + "/" +r[1];
+
     }
     
 
